@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'secret_token'
+SECRET_KEY = 'secret_key'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'auto_articles',
 ]
 
 MIDDLEWARE = [
@@ -68,8 +69,8 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'auto_history',
-        'USER': 'postgres',
+        'NAME': 'db_name',
+        'USER': 'db_user',
         'PASSWORD': 'secret_password',
         'HOST': '127.0.0.1',
         'PORT': '5432',
